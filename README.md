@@ -127,7 +127,7 @@ USER SETTINGS
    DEFAULT_ADMIN_USER          Set the default admin user (defaults to "admin")
    DEFAULT_ADMIN_PASSWORD      Set the default admin's password (defaults to "admin"). Must be at least 6 chars long
    DEFAULT_USER                Set the default user (defaults to "user")
-   DEFAULT_PASSWORD            Set the default user's password (defaults to "rundeck")
+   DEFAULT_PASSWORD            Set the default user's password (defaults to "user")
 
 SERVER SETTINGS
    SERVER_MEMORY               Increases maximum permanent generation size

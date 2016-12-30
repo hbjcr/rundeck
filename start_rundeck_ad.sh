@@ -21,4 +21,4 @@ docker run -d \
 	-e AD_USERBASEDN="DC=example,DC=com" \
 	-e AD_ROLEBASEDN="CN=example_developer,OU=ExampleOU,DC=example,DC=com" \
 	--name rundeck -h rundeck \
-	automation/rundeck
+	hbjcr/rundeck

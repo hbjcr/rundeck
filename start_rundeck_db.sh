@@ -5,4 +5,4 @@ docker run -d \
     -e DB_USER=rundeck \
     -e DB_PASSWORD=rundeck \
     --name rundeck -h rundeck \
-    rundeck
+    hbjcr/rundeck

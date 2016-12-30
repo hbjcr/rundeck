@@ -56,12 +56,13 @@ mem=${SERVER_MEMORY:-1024}
 perm=$(($mem/4))
 
 if [ ! -f "${initfile}" ]; then
+	echo "> Generating Configuration File"
 
 	function install_rundeck() {
 		echo "==> Installing rundeck"
 		java -jar $RDECK_JAR --installonly
-		echo "${DEFAULT_ADMIN_USER:-admin}:${DEFAULT_ADMIN_PASSWORD:-rundeck},user,admin" > $realm_properties
-		echo "${DEFAULT_USER:-guest}:${DEFAULT_PASSWORD:-rundeck},user" >> $realm_properties
+		echo "${DEFAULT_ADMIN_USER:-admin}:${DEFAULT_ADMIN_PASSWORD:-admin},user,admin" > $realm_properties
+		echo "${DEFAULT_USER:-user}:${DEFAULT_PASSWORD:-user},user" >> $realm_properties
 	}
 
 	function config_grails_url() {
@@ -152,38 +153,41 @@ if [ ! -f "${initfile}" ]; then
 
 	# Use regular http only when https won't be used
 	if [ -z ${SERVER_SECURED_URL} ]; then
-		echo "=> HTTP Configuration"
+		echo "==> HTTP Configuration"
 		config_grails_url
 	fi
 
 	if ! [ -z ${SERVER_SECURED_URL} ]; then
-		echo "=> HTTPS Configuration"
+		echo "==> HTTPS Configuration"
 		config_ssl
 	fi
 
 	# If DB is not used then local storage will be used instead
 	if ! [ -z ${DB_HOST} ]; then
-		echo "=> DB Configuration"
+		echo "==> DB Configuration"
 		config_database
 	fi
 
 	if ! [ -z ${MAIL_HOST} ]; then
-		echo "=> Mail Configuration"
+		echo "==> Mail Configuration"
 		config_mail
 	fi
 	
 	touch ${initfile}
 fi
 
+echo "> Params: General"
 params="-Xmx${mem}m "
 params="$params -XX:MaxPermSize=${perm}m "
 params="$params -Drundeck.jetty.connector.forwarded=true "
 
 if [ -z ${SERVER_SECURED_URL} ]; then
+	echo "=> Params: HTTP"
 	params="$params -Dserver.http.host=0.0.0.0 "
 	params="$params -Dserver.hostname=$(hostname) "
 	params="$params -Dserver.http.port=${SERVER_PORT:-4440} "
 else
+	echo "=> Params: HTTPS"
 	params="$params -Drundeck.ssl.config=$ssl_properties "
 	params="$params -Dserver.https.port=${SERVER_SECURED_PORT:-4443}"
 	params="$params -Djavax.net.ssl.trustStore=$truststore_file"
@@ -192,6 +196,7 @@ else
 fi
 
 if ! [ -z ${AD_HOST} ]; then
+	echo "=> Params: Active Directory"
 	# References:
 	# http://rundeck.org/docs/administration/authenticating-users.html
 	# https://meinit.nl/connect-rundeck-active-directory

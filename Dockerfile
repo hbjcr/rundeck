@@ -6,7 +6,7 @@ ENV     RDECK_JAR=$RDECK_BASE/app.jar
 ENV     PATH=$PATH:$RDECK_BASE/tools/bin
 
 ADD     http://dl.bintray.com/rundeck/rundeck-maven/rundeck-launcher-${RUNDECK_VERSION}.jar $RDECK_JAR
-RUN     apk add --update openjdk7-jre bash curl ca-certificates openssh-client && \
+RUN     apk add --update openjdk8-jre bash curl ca-certificates openssh-client && \
         mkdir -p $RDECK_BASE && \
         rm -Rf /var/cache/apk/*
 

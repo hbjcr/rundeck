@@ -11,6 +11,8 @@ Rundeck allows you to run tasks on any number of nodes from a web-based or comma
 
 [Getting started](http://rundeck.org/tour.html)
 
+[Documentation](http://rundeck.org/docs/)
+
 [Release Notes](https://github.com/rundeck/rundeck/blob/master/RELEASE.md)
 
 ## Image features
@@ -150,23 +152,16 @@ DB SETTINGS
    DB_PASSWORD                 Database password (defaults to "rundeck")
 
 EMAIL SETTINGS
-	MAIL_HOST                   Email server host address (if not provided then no email notifications will be available)
-	MAIL_PORT                   Email server port number (defaults to "25")
-	MAIL_FROM                   From email account
-	MAIL_USER                   Email server username
-	MAIL_PASSWORD               Email server password
+   MAIL_HOST                   Email server host address (if not provided then no email notifications will be available)
+   MAIL_PORT                   Email server port number (defaults to "25")
+   MAIL_FROM                   From email account
+   MAIL_USER                   Email server username
+   MAIL_PASSWORD               Email server password
 
 ACTIVE DIRECTORY SETTINGS
-	AD_HOST                     Active Directory (AD) server to be used
-	AD_PORT                     AD server port number (defaults to "389")
-	AD_BINDN					Username used to query your AD in distinguised name (DN) form  e.g. "cn=myusername,dc=example,dc=com" (https://msdn.microsoft.com/en-us/library/windows/desktop/aa366101(v=vs.85).aspx)
-	AD_BINPASSWORD				Password used to query your AD in clear text
-	AD_USERBASEDN				Base DN to search for users, this is the OU which recursive searches for users will be performed on, e.g. "ou=People,dc=test1,dc=example,dc=com"
-	AD_ROLEBASEDN				Base DN for role membership search, this is where your "rundeck" AD user group is, e.g. "ou=Groups,dc=test1,dc=example,dc=com".
-
-NODES SETTINGS
-	NODE_USER                   Username used to connect to provided nodes
-	NODE_PASSWORD               Password used to connect to provided nodes
-	NODE_LIST                   Semicolon separated list of nodes
-	NODE_ENV                    Application environment (either DEV or PROD)
-```
+   AD_HOST                     Active Directory (AD) server to be used
+   AD_PORT                     AD server port number (defaults to "389")
+   AD_BINDN					Username used to query your AD in distinguised name (DN) form  e.g. "cn=myusername,dc=example,dc=com" (https://msdn.microsoft.com/en-us/library/windows/desktop/aa366101(v=vs.85).aspx)
+   AD_BINPASSWORD				Password used to query your AD in clear text
+   AD_USERBASEDN				Base DN to search for users, this is the OU which recursive searches for users will be performed on, e.g. "ou=People,dc=test1,dc=example,dc=com"
+   AD_ROLEBASEDN				Base DN for role membership search, this is where your "rundeck" AD user group is, e.g. "ou=Groups,dc=test1,dc=example,dc=com".

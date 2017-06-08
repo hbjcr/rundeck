@@ -29,19 +29,19 @@
 #   DB_PASSWORD                 Database password (defaults to "rundeck")
 
 # EMAIL SETTINGS
-#	MAIL_HOST                   Email server host address (if not provided then no email notifications will be available)
-#	MAIL_PORT                   Email server port number (defaults to "25")
-#	MAIL_FROM                   From email account
-#	MAIL_USER                   Email server username
-#	MAIL_PASSWORD               Email server password
+#   MAIL_HOST                   Email server host address (if not provided then no email notifications will be available)
+#   MAIL_PORT                   Email server port number (defaults to "25")
+#   MAIL_FROM                   From email account
+#   MAIL_USER                   Email server username
+#   MAIL_PASSWORD               Email server password
 
 # ACTIVE DIRECTORY SETTINGS
-#	AD_HOST                     Active Directory (AD) server to be used
-#	AD_PORT                     AD server port number (defaults to "389")
-#	AD_BINDN					Username used to query your AD in distinguised name (DN) form  e.g. "cn=myusername,dc=example,dc=com" (https://msdn.microsoft.com/en-us/library/windows/desktop/aa366101(v=vs.85).aspx)
-#	AD_BINPASSWORD				Password used to query your AD in clear text
-#	AD_USERBASEDN				Base DN to search for users, this is the OU which recursive searches for users will be performed on, e.g. "ou=People,dc=test1,dc=example,dc=com"
-#	AD_ROLEBASEDN				Base DN for role membership search, this is where your "rundeck" AD user group is, e.g. "ou=Groups,dc=test1,dc=example,dc=com".
+#   AD_HOST                     Active Directory (AD) server to be used
+#   AD_PORT                     AD server port number (defaults to "389")
+#   AD_BINDN                    Username used to query your AD in distinguised name (DN) form  e.g. "cn=myusername,dc=example,dc=com" (https://msdn.microsoft.com/en-us/library/windows/desktop/aa366101(v=vs.85).aspx)
+#   AD_BINPASSWORD              Password used to query your AD in clear text
+#   AD_USERBASEDN               Base DN to search for users, this is the OU which recursive searches for users will be performed on, e.g. "ou=People,dc=test1,dc=example,dc=com"
+#   AD_ROLEBASEDN               Base DN for role membership search, this is where your "rundeck" AD user group is, e.g. "ou=Groups,dc=test1,dc=example,dc=com".
 
 config_properties=$RDECK_BASE/server/config/rundeck-config.properties
 realm_properties=$RDECK_BASE/server/config/realm.properties

@@ -178,7 +178,8 @@ fi
 
 echo "> Params: General"
 params="-Xmx${mem}m "
-params="$params -XX:MaxPermSize=${perm}m "
+# MaxPermSize support was removed in 8.0 (https://dzone.com/articles/java-8-permgen-metaspace)
+#params="$params -XX:MaxPermSize=${perm}m "
 params="$params -Drundeck.jetty.connector.forwarded=true "
 
 if [ -z ${SERVER_SECURED_URL} ]; then

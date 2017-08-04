@@ -165,3 +165,18 @@ ACTIVE DIRECTORY SETTINGS
    AD_BINPASSWORD              Password used to query your AD in clear text
    AD_USERBASEDN               Base DN to search for users, this is the OU which recursive searches for users will be performed on, e.g. "ou=People,dc=test1,dc=example,dc=com"
    AD_ROLEBASEDN               Base DN for role membership search, this is where your "rundeck" AD user group is, e.g. "ou=Groups,dc=test1,dc=example,dc=com".
+```
+
+## Community
+
+[Roadmap](https://trello.com/board/rundeck-development/518942f94e39d7a36901490b)
+
+[Report bugs](https://github.com/rundeck/rundeck/issues)
+
+[Chat](http://webchat.freenode.net/?nick=rundeckuser.&channels=rundeck&prompt=1)
+
+[Mailing list](http://groups.google.com/group/rundeck-discuss)
+
+[Twitter](http://twitter.com/rundeck)
+
+

@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION=2.8.4
+VERSION=2.9.0
 NAME="hbjcr/rundeck"
 
 #docker build -t $NAME .

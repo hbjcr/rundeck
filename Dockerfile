@@ -1,6 +1,6 @@
 FROM    alpine
 
-ENV     RUNDECK_VERSION=2.10.3
+ENV     RUNDECK_VERSION=2.10.4
 ENV     RDECK_BASE=/etc/rundeck
 ENV     RDECK_JAR=$RDECK_BASE/app.jar
 ENV     PATH=$PATH:$RDECK_BASE/tools/bin
